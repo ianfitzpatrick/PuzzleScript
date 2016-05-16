@@ -523,6 +523,8 @@ function checkKey(e,justPressed) {
         break;
         }
         case 13://enter
+        case 49://1
+        case 69://e
         case 32://space
         case 67://c
         case 88://x
@@ -537,6 +539,7 @@ function checkKey(e,justPressed) {
         }
         case 85://u
         case 90://z
+        case 82://r 
         {
             //undo
             if (textMode===false) {
@@ -547,7 +550,7 @@ function checkKey(e,justPressed) {
             }
             break;
         }
-        case 82://r
+        case 72://h
         {
         	if (textMode===false) {
         		if (justPressed) {
@@ -560,12 +563,16 @@ function checkKey(e,justPressed) {
             break;
         }
         case 27://escape
+        case 50://2
         {
         	if (titleScreen===false) {
 				goToTitleScreen();	
 		    	tryPlayTitleSound();
 				canvasResize();			
 				return prevent(e)
+        	} if (titleScreen===true) {
+        		// close browser
+        		window.close();
         	}
         	break;
         }
