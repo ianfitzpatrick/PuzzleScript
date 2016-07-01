@@ -495,13 +495,11 @@ function checkKey(e,justPressed) {
     var inputdir=-1;
     switch(e.keyCode) {
         case 65://a
-        case 37: //left
         {
 //            window.console.log("LEFT");
             inputdir=1;
         break;
         }
-        case 38: //up
         case 87: //w
         {
 //            window.console.log("UP");
@@ -509,25 +507,21 @@ function checkKey(e,justPressed) {
         break;
         }
         case 68://d
-        case 39: //right
         {
 //            window.console.log("RIGHT");
             inputdir=3;
         break;
         }
         case 83://s
-        case 40: //down
         {
 //            window.console.log("DOWN");
             inputdir=2;
         break;
         }
-        case 13://enter
         case 49://1
         case 69://e
-        case 32://space
-        case 67://c
-        case 88://x
+        case 82://r
+        case 84://t
         {
 //            window.console.log("ACTION");
 			if (norepeat_action===false || justPressed) {
@@ -537,9 +531,9 @@ function checkKey(e,justPressed) {
             }
         break;
         }
-        case 85://u
-        case 90://z
-        case 82://r 
+        case 70://f
+        case 71://g
+        case 72://h 
         {
             //undo
             if (textMode===false) {
@@ -550,7 +544,7 @@ function checkKey(e,justPressed) {
             }
             break;
         }
-        case 72://h
+        case 52://4
         {
         	if (textMode===false) {
         		if (justPressed) {
@@ -562,7 +556,6 @@ function checkKey(e,justPressed) {
             }
             break;
         }
-        case 27://escape
         case 50://2
         {
         	if (titleScreen===false) {

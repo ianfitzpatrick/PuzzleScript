@@ -40,7 +40,7 @@ var messagecontainer_template = [
 	"..................................",
 	"..................................",
 	"..................................",
-	"..........X to continue...........",
+	"..[any.row 1 button to continue]..",
 	"..................................",
 	".................................."
 ];
@@ -56,8 +56,8 @@ var titletemplate_firstgo = [
 	"..................................",
 	"..................................",
 	".joystick to move...............",
-	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".row 1 buttons to select...........",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 var titletemplate_select0 = [
@@ -70,9 +70,9 @@ var titletemplate_select0 = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".joystick to move...............",
-	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".joystick to move.................",
+	".button 1 to action...............",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 var titletemplate_select1 = [
@@ -87,7 +87,7 @@ var titletemplate_select1 = [
 	"..................................",
 	".joystick to move...............",
 	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 
@@ -103,7 +103,7 @@ var titletemplate_firstgo_selected = [
 	"..................................",
 	".joystick to move...............",
 	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 var titletemplate_select0_selected = [
@@ -118,7 +118,7 @@ var titletemplate_select0_selected = [
 	"..................................",
 	".joystick to move...............",
 	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 var titletemplate_select1_selected = [
@@ -133,7 +133,7 @@ var titletemplate_select1_selected = [
 	"..................................",
 	".joystick to move...............",
 	".button 1 to action......................",
-	".btn2 to undo | btn6 restart level..........",
+	".row 2 buttons to undo.............",
 	".................................."];
 
 var titleImage=[];
@@ -196,12 +196,12 @@ function generateTitleScreen()
 	if (noUndo && noRestart) {
 		titleImage[11]="..................................";
 	} else if (noUndo) {
-		titleImage[11]=".button 6 to restart.....................";
+		titleImage[11]=".secret button to restart................";
 	} else if (noRestart) {
-		titleImage[11]=".button 2 to undo.....................";
+		titleImage[11]=".row 2 buttons to undo.............";
 	}
 	if (noAction) {
-		titleImage[10]=".button 1 to select......................";
+		titleImage[10]=".row 1 buttons to select......................";
 	}
 	for (var i=0;i<titleImage.length;i++)
 	{
