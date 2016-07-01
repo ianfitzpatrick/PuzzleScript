@@ -1,6 +1,6 @@
 var canSetHTMLColors=false;
 var canDump=true;
-var canYoutube=false;
+var canMusic=false;
 var inputHistory=[];
 var compiledText;
 var canOpenEditor=true;

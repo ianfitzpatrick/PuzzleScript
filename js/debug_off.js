@@ -1,7 +1,7 @@
 var canSetHTMLColors=true;
 var canDump=false;
 var canOpenEditor=false;
-var canYoutube=true;
+var canMusic=true;
 var IDE=false;
 
 function stripTags(str) {
