@@ -6,9 +6,9 @@
 ..................................
 .............continue.............
 ..................................
-joystick to move................
-button 1 to action.......................
-btn2 to undo | btn6 restart level...........
+arrow keys to move................
+x to action.......................
+z to undo, r to restart...........
 */
 
 var RandomGen = new RNG();
@@ -40,7 +40,7 @@ var messagecontainer_template = [
 	"..................................",
 	"..................................",
 	"..................................",
-	"..[any.row 1 button to continue]..",
+	"..........X to continue...........",
 	"..................................",
 	".................................."
 ];
@@ -55,9 +55,9 @@ var titletemplate_firstgo = [
 	"..........#.start game.#..........",
 	"..................................",
 	"..................................",
-	".joystick to move...............",
-	".row 1 buttons to select...........",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 var titletemplate_select0 = [
@@ -70,9 +70,9 @@ var titletemplate_select0 = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".joystick to move.................",
-	".button 1 to action...............",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 var titletemplate_select1 = [
@@ -85,9 +85,9 @@ var titletemplate_select1 = [
 	"..................................",
 	"...........#.continue.#...........",
 	"..................................",
-	".joystick to move...............",
-	".button 1 to action......................",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 
@@ -101,9 +101,9 @@ var titletemplate_firstgo_selected = [
 	"###########.start game.###########",
 	"..................................",
 	"..................................",
-	".joystick to move...............",
-	".button 1 to action......................",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 var titletemplate_select0_selected = [
@@ -116,9 +116,9 @@ var titletemplate_select0_selected = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".joystick to move...............",
-	".button 1 to action......................",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 var titletemplate_select1_selected = [
@@ -131,9 +131,9 @@ var titletemplate_select1_selected = [
 	"..................................",
 	"############.continue.############",
 	"..................................",
-	".joystick to move...............",
-	".button 1 to action......................",
-	".row 2 buttons to undo.............",
+	".arrow keys to move...............",
+	".X to action......................",
+	".Z to undo, R to restart..........",
 	".................................."];
 
 var titleImage=[];
@@ -196,12 +196,12 @@ function generateTitleScreen()
 	if (noUndo && noRestart) {
 		titleImage[11]="..................................";
 	} else if (noUndo) {
-		titleImage[11]=".secret button to restart................";
+		titleImage[11]=".R to restart.....................";
 	} else if (noRestart) {
-		titleImage[11]=".row 2 buttons to undo.............";
+		titleImage[11]=".Z to undo.....................";
 	}
 	if (noAction) {
-		titleImage[10]=".row 1 buttons to select......................";
+		titleImage[10]=".X to select......................";
 	}
 	for (var i=0;i<titleImage.length;i++)
 	{
