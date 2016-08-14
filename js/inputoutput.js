@@ -495,11 +495,13 @@ function checkKey(e,justPressed) {
     var inputdir=-1;
     switch(e.keyCode) {
         case 65://a
+        case 37: //left
         {
 //            window.console.log("LEFT");
             inputdir=1;
         break;
         }
+        case 38: //up
         case 87: //w
         {
 //            window.console.log("UP");
@@ -507,21 +509,23 @@ function checkKey(e,justPressed) {
         break;
         }
         case 68://d
+        case 39: //right
         {
 //            window.console.log("RIGHT");
             inputdir=3;
         break;
         }
         case 83://s
+        case 40: //down
         {
 //            window.console.log("DOWN");
             inputdir=2;
         break;
         }
-        case 49://1
-        case 69://e
-        case 82://r
-        case 84://t
+        case 13://enter
+        case 32://space
+        case 67://c
+        case 88://x
         {
 //            window.console.log("ACTION");
 			if (norepeat_action===false || justPressed) {
@@ -531,9 +535,8 @@ function checkKey(e,justPressed) {
             }
         break;
         }
-        case 70://f
-        case 71://g
-        case 72://h 
+        case 85://u
+        case 90://z
         {
             //undo
             if (textMode===false) {
@@ -544,7 +547,7 @@ function checkKey(e,justPressed) {
             }
             break;
         }
-        case 52://4
+        case 82://r
         {
         	if (textMode===false) {
         		if (justPressed) {
@@ -556,16 +559,13 @@ function checkKey(e,justPressed) {
             }
             break;
         }
-        case 50://2
+        case 27://escape
         {
         	if (titleScreen===false) {
 				goToTitleScreen();	
 		    	tryPlayTitleSound();
 				canvasResize();			
 				return prevent(e)
-        	} if (titleScreen===true) {
-        		// close browser
-        		window.close();
         	}
         	break;
         }
